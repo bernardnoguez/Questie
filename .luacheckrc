@@ -1,3 +1,18 @@
+exclude_files = {
+    "ExternalScripts(DONOTINCLUDEINRELEASE)/**/",
+    "releases/**/",
+    "Database/itemDB.lua",
+    "Database/objectDB.lua",
+    "Database/questDB.lua",
+    "Database/spawnDB.lua",
+    "Localization/lookups/",
+    "Libs/**/*.lua",
+    ".luacheckrc",
+    ".history/**/*",
+    ".vscode/**/*",
+    "**/.luarocks/**/", -- Created by the GitHub Action
+    "**/.install/**/", -- Created by the GitHub Action
+}
 stds.questie = {
     read_globals = {}, -- these globals can only be accessed.
     globals = {
@@ -2706,4 +2721,5 @@ std = "max+questie"
 ignore = {
     "212", -- unused argument "self"
     "432", -- shadowing upvalue argument "self"
+    "631", -- Line is too long
 }
